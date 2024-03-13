@@ -23,5 +23,19 @@ namespace СельскоеХозяйство
             окноРуководителя.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ОкноПросмотраКультур окноПросмотраКультур = new ОкноПросмотраКультур();
+            окноПросмотраКультур.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ОкноПросмотраСкладов окноПросмотраСкладов = new ОкноПросмотраСкладов();
+            окноПросмотраСкладов.Show();
+            this.Close();
+        }
     }
 }

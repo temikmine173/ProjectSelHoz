@@ -88,24 +88,26 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button3.Location = new System.Drawing.Point(521, 243);
+            this.button3.Location = new System.Drawing.Point(511, 285);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(264, 68);
+            this.button3.Size = new System.Drawing.Size(295, 68);
             this.button3.TabIndex = 29;
             this.button3.Text = "Отчёт о прибыли";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button2.Location = new System.Drawing.Point(521, 352);
+            this.button2.Location = new System.Drawing.Point(511, 394);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(264, 68);
+            this.button2.Size = new System.Drawing.Size(295, 68);
             this.button2.TabIndex = 30;
             this.button2.Text = "Отчёт об урожае";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ОкноОтчётов
             // 
@@ -122,6 +124,7 @@
             this.Name = "ОкноОтчётов";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноОтчётов_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

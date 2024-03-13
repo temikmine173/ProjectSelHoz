@@ -19,8 +19,22 @@ namespace СельскоеХозяйство
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 fr2 = new Form2();
-            fr2.Show();
+            ОкноРастениеводство окноРастениеводство = new ОкноРастениеводство();
+            окноРастениеводство.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ОкноДобавитьСклад окноДобавитьСклад = new ОкноДобавитьСклад();
+            окноДобавитьСклад.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ОкноРедактированиеИнформацииОСкладе окноРедактированиеИнформацииОСкладе = new ОкноРедактированиеИнформацииОСкладе();
+            окноРедактированиеИнформацииОСкладе.Show();
             this.Close();
         }
     }

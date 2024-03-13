@@ -19,8 +19,8 @@ namespace СельскоеХозяйство
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Авторизация fr2 = new Авторизация();
-            fr2.Show();
+            Авторизация авторизация = new Авторизация();
+            авторизация.Show();
             this.Close();
         }
 

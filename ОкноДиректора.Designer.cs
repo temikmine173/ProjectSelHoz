@@ -79,10 +79,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button3.Location = new System.Drawing.Point(464, 258);
+            this.button3.Location = new System.Drawing.Point(457, 258);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(391, 68);
+            this.button3.Size = new System.Drawing.Size(400, 68);
             this.button3.TabIndex = 14;
             this.button3.Text = "Оформить поставку зерна";
             this.button3.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button4.Location = new System.Drawing.Point(464, 429);
+            this.button4.Location = new System.Drawing.Point(457, 429);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(391, 68);
+            this.button4.Size = new System.Drawing.Size(400, 68);
             this.button4.TabIndex = 15;
             this.button4.Text = "Сотрудники";
             this.button4.UseVisualStyleBackColor = true;
@@ -139,13 +139,14 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button5.Location = new System.Drawing.Point(464, 343);
+            this.button5.Location = new System.Drawing.Point(457, 343);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(391, 68);
+            this.button5.Size = new System.Drawing.Size(400, 68);
             this.button5.TabIndex = 16;
             this.button5.Text = "Оформить поставку животного";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // ОкноДиректора
             // 
