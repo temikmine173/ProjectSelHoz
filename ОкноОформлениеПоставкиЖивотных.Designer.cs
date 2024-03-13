@@ -210,6 +210,7 @@
             this.button2.TabIndex = 48;
             this.button2.Text = "Оформить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ОкноОформлениеПоставкиЖивотных
             // 
@@ -235,6 +236,7 @@
             this.Name = "ОкноОформлениеПоставкиЖивотных";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноОформлениеПоставкиЖивотных_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

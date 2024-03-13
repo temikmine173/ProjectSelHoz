@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраЖивотных));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,9 +41,18 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.животныеBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.животныеTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ЖивотныеTableAdapter();
+            this.номерЖивотногоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.окрасЖивотногоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.животныеBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,7 +105,22 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерЖивотногоDataGridViewTextBoxColumn,
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn,
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn,
+            this.окрасЖивотногоDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.животныеBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(15, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -159,6 +185,56 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // животныеBindingSource
+            // 
+            this.животныеBindingSource.DataMember = "Животные";
+            this.животныеBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // животныеTableAdapter
+            // 
+            this.животныеTableAdapter.ClearBeforeFill = true;
+            // 
+            // номерЖивотногоDataGridViewTextBoxColumn
+            // 
+            this.номерЖивотногоDataGridViewTextBoxColumn.DataPropertyName = "НомерЖивотного";
+            this.номерЖивотногоDataGridViewTextBoxColumn.HeaderText = "Номер животного";
+            this.номерЖивотногоDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерЖивотногоDataGridViewTextBoxColumn.Name = "номерЖивотногоDataGridViewTextBoxColumn";
+            this.номерЖивотногоDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерЖивотногоDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // наименованиеЖивотногоDataGridViewTextBoxColumn
+            // 
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn.DataPropertyName = "НаименованиеЖивотного";
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn.HeaderText = "Наименование животного";
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn.Name = "наименованиеЖивотногоDataGridViewTextBoxColumn";
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn.ReadOnly = true;
+            this.наименованиеЖивотногоDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // номерТипаЖивотногоDataGridViewTextBoxColumn
+            // 
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn.DataPropertyName = "НомерТипаЖивотного";
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn.HeaderText = "Типа животного";
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn.Name = "номерТипаЖивотногоDataGridViewTextBoxColumn";
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерТипаЖивотногоDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // окрасЖивотногоDataGridViewTextBoxColumn
+            // 
+            this.окрасЖивотногоDataGridViewTextBoxColumn.DataPropertyName = "ОкрасЖивотного";
+            this.окрасЖивотногоDataGridViewTextBoxColumn.HeaderText = "Окрас животного";
+            this.окрасЖивотногоDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.окрасЖивотногоDataGridViewTextBoxColumn.Name = "окрасЖивотногоDataGridViewTextBoxColumn";
+            this.окрасЖивотногоDataGridViewTextBoxColumn.ReadOnly = true;
+            this.окрасЖивотногоDataGridViewTextBoxColumn.Width = 200;
+            // 
             // ОкноПросмотраЖивотных
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -178,10 +254,13 @@
             this.Name = "ОкноПросмотраЖивотных";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноПросмотраЖивотных_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.животныеBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +278,13 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource животныеBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.ЖивотныеTableAdapter животныеTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерЖивотногоDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn наименованиеЖивотногоDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерТипаЖивотногоDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn окрасЖивотногоDataGridViewTextBoxColumn;
     }
 }
 

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраСотрудников));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,9 +41,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.номерСотрудникаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаРожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерПаспортаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерТелефонаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.стажРаботыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.сотрудникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.сотрудникиTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.СотрудникиTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,6 +137,7 @@
             this.button4.TabIndex = 30;
             this.button4.Text = "Удалить запись";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
             // 
@@ -133,6 +147,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(331, 39);
             this.textBox1.TabIndex = 31;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -148,13 +163,101 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерСотрудникаDataGridViewTextBoxColumn,
+            this.фИОDataGridViewTextBoxColumn,
+            this.датаРожденияDataGridViewTextBoxColumn,
+            this.номерПаспортаDataGridViewTextBoxColumn,
+            this.номерТелефонаDataGridViewTextBoxColumn,
+            this.стажРаботыDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.сотрудникиBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(15, 178);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(893, 423);
             this.dataGridView1.TabIndex = 32;
+            // 
+            // номерСотрудникаDataGridViewTextBoxColumn
+            // 
+            this.номерСотрудникаDataGridViewTextBoxColumn.DataPropertyName = "НомерСотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn.HeaderText = "Номер сотрудника";
+            this.номерСотрудникаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерСотрудникаDataGridViewTextBoxColumn.Name = "номерСотрудникаDataGridViewTextBoxColumn";
+            this.номерСотрудникаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерСотрудникаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // фИОDataGridViewTextBoxColumn
+            // 
+            this.фИОDataGridViewTextBoxColumn.DataPropertyName = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
+            this.фИОDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
+            this.фИОDataGridViewTextBoxColumn.ReadOnly = true;
+            this.фИОDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // датаРожденияDataGridViewTextBoxColumn
+            // 
+            this.датаРожденияDataGridViewTextBoxColumn.DataPropertyName = "ДатаРождения";
+            this.датаРожденияDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
+            this.датаРожденияDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.датаРожденияDataGridViewTextBoxColumn.Name = "датаРожденияDataGridViewTextBoxColumn";
+            this.датаРожденияDataGridViewTextBoxColumn.ReadOnly = true;
+            this.датаРожденияDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // номерПаспортаDataGridViewTextBoxColumn
+            // 
+            this.номерПаспортаDataGridViewTextBoxColumn.DataPropertyName = "НомерПаспорта";
+            this.номерПаспортаDataGridViewTextBoxColumn.HeaderText = "Номер паспорта";
+            this.номерПаспортаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерПаспортаDataGridViewTextBoxColumn.Name = "номерПаспортаDataGridViewTextBoxColumn";
+            this.номерПаспортаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерПаспортаDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // номерТелефонаDataGridViewTextBoxColumn
+            // 
+            this.номерТелефонаDataGridViewTextBoxColumn.DataPropertyName = "НомерТелефона";
+            this.номерТелефонаDataGridViewTextBoxColumn.HeaderText = "Номер телефона";
+            this.номерТелефонаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерТелефонаDataGridViewTextBoxColumn.Name = "номерТелефонаDataGridViewTextBoxColumn";
+            this.номерТелефонаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерТелефонаDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // стажРаботыDataGridViewTextBoxColumn
+            // 
+            this.стажРаботыDataGridViewTextBoxColumn.DataPropertyName = "СтажРаботы";
+            this.стажРаботыDataGridViewTextBoxColumn.HeaderText = "Стаж работы";
+            this.стажРаботыDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.стажРаботыDataGridViewTextBoxColumn.Name = "стажРаботыDataGridViewTextBoxColumn";
+            this.стажРаботыDataGridViewTextBoxColumn.ReadOnly = true;
+            this.стажРаботыDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // сотрудникиBindingSource
+            // 
+            this.сотрудникиBindingSource.DataMember = "Сотрудники";
+            this.сотрудникиBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // сотрудникиTableAdapter
+            // 
+            this.сотрудникиTableAdapter.ClearBeforeFill = true;
             // 
             // ОкноПросмотраСотрудников
             // 
@@ -175,10 +278,13 @@
             this.Name = "ОкноПросмотраСотрудников";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноПросмотраСотрудников_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сотрудникиBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +302,15 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource сотрудникиBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.СотрудникиTableAdapter сотрудникиTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерСотрудникаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаРожденияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерПаспортаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерТелефонаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn стажРаботыDataGridViewTextBoxColumn;
     }
 }
 

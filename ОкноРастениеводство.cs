@@ -37,5 +37,10 @@ namespace СельскоеХозяйство
             окноПросмотраСкладов.Show();
             this.Close();
         }
+
+        private void ОкноРастениеводство_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

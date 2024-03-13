@@ -23,5 +23,10 @@ namespace СельскоеХозяйство
             окноПросмотраЖивотных.Show();
             this.Close();
         }
+
+        private void ОкноРедактированияДанныхОЖивотном_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

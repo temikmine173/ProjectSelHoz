@@ -101,7 +101,6 @@
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox1.Location = new System.Drawing.Point(249, 209);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -230,6 +229,7 @@
             this.button2.TabIndex = 43;
             this.button2.Text = "Сохранить изменения";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -246,7 +246,6 @@
             // 
             // textBox2
             // 
-            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox2.Location = new System.Drawing.Point(750, 209);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -266,7 +265,6 @@
             // 
             // textBox4
             // 
-            this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox4.Location = new System.Drawing.Point(750, 449);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
@@ -304,6 +302,7 @@
             this.Name = "ОкноМойПрофиль";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноМойПрофиль_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

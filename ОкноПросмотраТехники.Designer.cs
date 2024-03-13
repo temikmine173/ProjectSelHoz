@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраТехники));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,9 +41,19 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.техникаBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.техникаTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ТехникаTableAdapter();
+            this.номерТехникиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.наименованиеТехникиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.номерТипаТехникиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.цветТехникиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.мощностьТехникиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.техникаBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -150,7 +162,23 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерТехникиDataGridViewTextBoxColumn,
+            this.наименованиеТехникиDataGridViewTextBoxColumn,
+            this.номерТипаТехникиDataGridViewTextBoxColumn,
+            this.цветТехникиDataGridViewTextBoxColumn,
+            this.мощностьТехникиDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.техникаBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(15, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -158,6 +186,65 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(893, 422);
             this.dataGridView1.TabIndex = 37;
+            // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // техникаBindingSource
+            // 
+            this.техникаBindingSource.DataMember = "Техника";
+            this.техникаBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // техникаTableAdapter
+            // 
+            this.техникаTableAdapter.ClearBeforeFill = true;
+            // 
+            // номерТехникиDataGridViewTextBoxColumn
+            // 
+            this.номерТехникиDataGridViewTextBoxColumn.DataPropertyName = "НомерТехники";
+            this.номерТехникиDataGridViewTextBoxColumn.HeaderText = "Номер техники";
+            this.номерТехникиDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерТехникиDataGridViewTextBoxColumn.Name = "номерТехникиDataGridViewTextBoxColumn";
+            this.номерТехникиDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерТехникиDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // наименованиеТехникиDataGridViewTextBoxColumn
+            // 
+            this.наименованиеТехникиDataGridViewTextBoxColumn.DataPropertyName = "НаименованиеТехники";
+            this.наименованиеТехникиDataGridViewTextBoxColumn.HeaderText = "Наименование техники";
+            this.наименованиеТехникиDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.наименованиеТехникиDataGridViewTextBoxColumn.Name = "наименованиеТехникиDataGridViewTextBoxColumn";
+            this.наименованиеТехникиDataGridViewTextBoxColumn.ReadOnly = true;
+            this.наименованиеТехникиDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // номерТипаТехникиDataGridViewTextBoxColumn
+            // 
+            this.номерТипаТехникиDataGridViewTextBoxColumn.DataPropertyName = "НомерТипаТехники";
+            this.номерТипаТехникиDataGridViewTextBoxColumn.HeaderText = "Номер типа техники";
+            this.номерТипаТехникиDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерТипаТехникиDataGridViewTextBoxColumn.Name = "номерТипаТехникиDataGridViewTextBoxColumn";
+            this.номерТипаТехникиDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерТипаТехникиDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // цветТехникиDataGridViewTextBoxColumn
+            // 
+            this.цветТехникиDataGridViewTextBoxColumn.DataPropertyName = "ЦветТехники";
+            this.цветТехникиDataGridViewTextBoxColumn.HeaderText = "Цвет техники";
+            this.цветТехникиDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.цветТехникиDataGridViewTextBoxColumn.Name = "цветТехникиDataGridViewTextBoxColumn";
+            this.цветТехникиDataGridViewTextBoxColumn.ReadOnly = true;
+            this.цветТехникиDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // мощностьТехникиDataGridViewTextBoxColumn
+            // 
+            this.мощностьТехникиDataGridViewTextBoxColumn.DataPropertyName = "МощностьТехники";
+            this.мощностьТехникиDataGridViewTextBoxColumn.HeaderText = "Мощность техники";
+            this.мощностьТехникиDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.мощностьТехникиDataGridViewTextBoxColumn.Name = "мощностьТехникиDataGridViewTextBoxColumn";
+            this.мощностьТехникиDataGridViewTextBoxColumn.ReadOnly = true;
+            this.мощностьТехникиDataGridViewTextBoxColumn.Width = 200;
             // 
             // ОкноПросмотраТехники
             // 
@@ -178,10 +265,13 @@
             this.Name = "ОкноПросмотраТехники";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноПросмотраТехники_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.техникаBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +289,14 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource техникаBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.ТехникаTableAdapter техникаTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерТехникиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn наименованиеТехникиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерТипаТехникиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn цветТехникиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn мощностьТехникиDataGridViewTextBoxColumn;
     }
 }
 

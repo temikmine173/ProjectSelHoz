@@ -35,5 +35,10 @@ namespace СельскоеХозяйство
             fr2.Show();
             this.Hide();
         }
+
+        private void ГлавнаяФорма_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

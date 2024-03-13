@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраКультур));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,9 +41,18 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.культурыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.культурыTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter();
+            this.номерКультурыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.наименованиеКультурыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.цветКультурыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.срокСозреванияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -150,7 +161,22 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.номерКультурыDataGridViewTextBoxColumn,
+            this.наименованиеКультурыDataGridViewTextBoxColumn,
+            this.цветКультурыDataGridViewTextBoxColumn,
+            this.срокСозреванияDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.культурыBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -158,6 +184,56 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(893, 422);
             this.dataGridView1.TabIndex = 37;
+            // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // культурыBindingSource
+            // 
+            this.культурыBindingSource.DataMember = "Культуры";
+            this.культурыBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // культурыTableAdapter
+            // 
+            this.культурыTableAdapter.ClearBeforeFill = true;
+            // 
+            // номерКультурыDataGridViewTextBoxColumn
+            // 
+            this.номерКультурыDataGridViewTextBoxColumn.DataPropertyName = "НомерКультуры";
+            this.номерКультурыDataGridViewTextBoxColumn.HeaderText = "Номер культуры";
+            this.номерКультурыDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.номерКультурыDataGridViewTextBoxColumn.Name = "номерКультурыDataGridViewTextBoxColumn";
+            this.номерКультурыDataGridViewTextBoxColumn.ReadOnly = true;
+            this.номерКультурыDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // наименованиеКультурыDataGridViewTextBoxColumn
+            // 
+            this.наименованиеКультурыDataGridViewTextBoxColumn.DataPropertyName = "НаименованиеКультуры";
+            this.наименованиеКультурыDataGridViewTextBoxColumn.HeaderText = "Наименование культуры";
+            this.наименованиеКультурыDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.наименованиеКультурыDataGridViewTextBoxColumn.Name = "наименованиеКультурыDataGridViewTextBoxColumn";
+            this.наименованиеКультурыDataGridViewTextBoxColumn.ReadOnly = true;
+            this.наименованиеКультурыDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // цветКультурыDataGridViewTextBoxColumn
+            // 
+            this.цветКультурыDataGridViewTextBoxColumn.DataPropertyName = "ЦветКультуры";
+            this.цветКультурыDataGridViewTextBoxColumn.HeaderText = "Цвет культуры";
+            this.цветКультурыDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.цветКультурыDataGridViewTextBoxColumn.Name = "цветКультурыDataGridViewTextBoxColumn";
+            this.цветКультурыDataGridViewTextBoxColumn.ReadOnly = true;
+            this.цветКультурыDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // срокСозреванияDataGridViewTextBoxColumn
+            // 
+            this.срокСозреванияDataGridViewTextBoxColumn.DataPropertyName = "СрокСозревания";
+            this.срокСозреванияDataGridViewTextBoxColumn.HeaderText = "Срок созревания";
+            this.срокСозреванияDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.срокСозреванияDataGridViewTextBoxColumn.Name = "срокСозреванияDataGridViewTextBoxColumn";
+            this.срокСозреванияDataGridViewTextBoxColumn.ReadOnly = true;
+            this.срокСозреванияDataGridViewTextBoxColumn.Width = 200;
             // 
             // ОкноПросмотраКультур
             // 
@@ -178,10 +254,13 @@
             this.Name = "ОкноПросмотраКультур";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноПросмотраКультур_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,6 +278,13 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource культурыBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter культурыTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерКультурыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn наименованиеКультурыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn цветКультурыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn срокСозреванияDataGridViewTextBoxColumn;
     }
 }
 
