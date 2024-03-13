@@ -1,6 +1,6 @@
 ﻿namespace СельскоеХозяйство
 {
-    partial class ОкноПросмотраТехники
+    partial class ОкноПросмотраКультур
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраТехники));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраКультур));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,12 +60,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(557, 36);
+            this.label1.Location = new System.Drawing.Point(532, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 54);
+            this.label1.Size = new System.Drawing.Size(212, 54);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Техника";
+            this.label1.Text = "Культуры";
             // 
             // pictureBox1
             // 
@@ -95,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(1033, 179);
+            this.label2.Location = new System.Drawing.Point(1030, 179);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 32);
@@ -105,7 +105,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.textBox1.Location = new System.Drawing.Point(915, 215);
+            this.textBox1.Location = new System.Drawing.Point(912, 215);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(331, 39);
@@ -114,7 +114,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button4.Location = new System.Drawing.Point(915, 534);
+            this.button4.Location = new System.Drawing.Point(912, 534);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(331, 68);
@@ -125,23 +125,23 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button3.Location = new System.Drawing.Point(915, 429);
+            this.button3.Location = new System.Drawing.Point(912, 429);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(331, 82);
             this.button3.TabIndex = 40;
-            this.button3.Text = "Редактировать информацию о технике";
+            this.button3.Text = "Редактировать данные о культуре";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button2.Location = new System.Drawing.Point(915, 338);
+            this.button2.Location = new System.Drawing.Point(912, 338);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(331, 68);
             this.button2.TabIndex = 39;
-            this.button2.Text = "Добавить технику";
+            this.button2.Text = "Добавить культуру";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -149,7 +149,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 179);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 179);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -157,7 +157,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(893, 422);
             this.dataGridView1.TabIndex = 37;
             // 
-            // ОкноПросмотраТехники
+            // ОкноПросмотраКультур
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1274, 728);
-            this.Name = "ОкноПросмотраТехники";
+            this.Name = "ОкноПросмотраКультур";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
             this.panel1.ResumeLayout(false);

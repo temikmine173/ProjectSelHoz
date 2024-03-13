@@ -1,6 +1,6 @@
 ﻿namespace СельскоеХозяйство
 {
-    partial class ОкноПросмотраТехники
+    partial class ОкноПросмотраСкладов
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраТехники));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноПросмотраСкладов));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,12 +60,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(557, 36);
+            this.label1.Location = new System.Drawing.Point(565, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 54);
+            this.label1.Size = new System.Drawing.Size(175, 54);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Техника";
+            this.label1.Text = "Склады";
             // 
             // pictureBox1
             // 
@@ -130,7 +130,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(331, 82);
             this.button3.TabIndex = 40;
-            this.button3.Text = "Редактировать информацию о технике";
+            this.button3.Text = "Редактировать данные о складе";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -141,7 +141,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(331, 68);
             this.button2.TabIndex = 39;
-            this.button2.Text = "Добавить технику";
+            this.button2.Text = "Добавить склад";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -157,7 +157,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(893, 422);
             this.dataGridView1.TabIndex = 37;
             // 
-            // ОкноПросмотраТехники
+            // ОкноПросмотраСкладов
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1274, 728);
-            this.Name = "ОкноПросмотраТехники";
+            this.Name = "ОкноПросмотраСкладов";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
             this.panel1.ResumeLayout(false);

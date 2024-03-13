@@ -120,7 +120,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(331, 68);
             this.button4.TabIndex = 30;
-            this.button4.Text = "Удалить сотрудника";
+            this.button4.Text = "Удалить запись";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox1

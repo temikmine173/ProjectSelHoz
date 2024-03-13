@@ -46,11 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserData.cs" />
+    <Compile Include="ОкноДобавитьСклад.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноДобавитьСклад.Designer.cs">
+      <DependentUpon>ОкноДобавитьСклад.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноДобавленияЖивотного.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноДобавленияЖивотного.Designer.cs">
+      <DependentUpon>ОкноДобавленияЖивотного.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноДобавленияКультуры.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноДобавленияКультуры.Designer.cs">
+      <DependentUpon>ОкноДобавленияКультуры.cs</DependentUpon>
+    </Compile>
     <Compile Include="ОкноДобавленияСотрудника.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ОкноДобавленияСотрудника.Designer.cs">
       <DependentUpon>ОкноДобавленияСотрудника.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноДобавленияТехники.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноДобавленияТехники.Designer.cs">
+      <DependentUpon>ОкноДобавленияТехники.cs</DependentUpon>
     </Compile>
     <Compile Include="ОкноДокументы.cs">
       <SubType>Form</SubType>
@@ -58,17 +83,41 @@
     <Compile Include="ОкноДокументы.Designer.cs">
       <DependentUpon>ОкноДокументы.cs</DependentUpon>
     </Compile>
+    <Compile Include="ОкноКвитанцииОПоставкеЖивотного.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноКвитанцииОПоставкеЖивотного.Designer.cs">
+      <DependentUpon>ОкноКвитанцииОПоставкеЖивотного.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноКвитанцияОПоставкеЗерна.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноКвитанцияОПоставкеЗерна.Designer.cs">
+      <DependentUpon>ОкноКвитанцияОПоставкеЗерна.cs</DependentUpon>
+    </Compile>
     <Compile Include="ОкноМойПрофиль.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ОкноМойПрофиль.Designer.cs">
       <DependentUpon>ОкноМойПрофиль.cs</DependentUpon>
     </Compile>
+    <Compile Include="ОкноОтчётОбУрожае.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноОтчётОбУрожае.Designer.cs">
+      <DependentUpon>ОкноОтчётОбУрожае.cs</DependentUpon>
+    </Compile>
     <Compile Include="ОкноОтчётов.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ОкноОтчётов.Designer.cs">
       <DependentUpon>ОкноОтчётов.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноОтчётОПрибыли.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноОтчётОПрибыли.Designer.cs">
+      <DependentUpon>ОкноОтчётОПрибыли.cs</DependentUpon>
     </Compile>
     <Compile Include="ОкноОформлениеПоставкиЖивотных.cs">
       <SubType>Form</SubType>
@@ -88,6 +137,18 @@
     <Compile Include="ОкноПросмотраЖивотных.Designer.cs">
       <DependentUpon>ОкноПросмотраЖивотных.cs</DependentUpon>
     </Compile>
+    <Compile Include="ОкноПросмотраКультур.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноПросмотраКультур.Designer.cs">
+      <DependentUpon>ОкноПросмотраКультур.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноПросмотраСкладов.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноПросмотраСкладов.Designer.cs">
+      <DependentUpon>ОкноПросмотраСкладов.cs</DependentUpon>
+    </Compile>
     <Compile Include="ОкноПросмотраСотрудников.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +167,35 @@
     <Compile Include="ОкноРастениеводство.Designer.cs">
       <DependentUpon>ОкноРастениеводство.cs</DependentUpon>
     </Compile>
+    <Compile Include="ОкноРедактированиеИнформацииОСкладе.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноРедактированиеИнформацииОСкладе.Designer.cs">
+      <DependentUpon>ОкноРедактированиеИнформацииОСкладе.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноРедактированиеИнформацииОТехнике.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноРедактированиеИнформацииОТехнике.Designer.cs">
+      <DependentUpon>ОкноРедактированиеИнформацииОТехнике.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноРедактированияДанныхОЖивотном.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноРедактированияДанныхОЖивотном.Designer.cs">
+      <DependentUpon>ОкноРедактированияДанныхОЖивотном.cs</DependentUpon>
+    </Compile>
     <Compile Include="ОкноРедактированияДанныхСотрудника.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ОкноРедактированияДанныхСотрудника.Designer.cs">
       <DependentUpon>ОкноРедактированияДанныхСотрудника.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноРедактированияИнформацииОКультуре.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноРедактированияИнформацииОКультуре.Designer.cs">
+      <DependentUpon>ОкноРедактированияИнформацииОКультуре.cs</DependentUpon>
     </Compile>
     <Compile Include="ОПрограмме.cs">
       <SubType>Form</SubType>
@@ -155,17 +240,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>СельскоеХозяйствоDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ОкноДобавитьСклад.resx">
+      <DependentUpon>ОкноДобавитьСклад.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноДобавленияЖивотного.resx">
+      <DependentUpon>ОкноДобавленияЖивотного.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноДобавленияКультуры.resx">
+      <DependentUpon>ОкноДобавленияКультуры.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ОкноДобавленияСотрудника.resx">
       <DependentUpon>ОкноДобавленияСотрудника.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноДобавленияТехники.resx">
+      <DependentUpon>ОкноДобавленияТехники.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ОкноДокументы.resx">
       <DependentUpon>ОкноДокументы.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ОкноКвитанцииОПоставкеЖивотного.resx">
+      <DependentUpon>ОкноКвитанцииОПоставкеЖивотного.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноКвитанцияОПоставкеЗерна.resx">
+      <DependentUpon>ОкноКвитанцияОПоставкеЗерна.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ОкноМойПрофиль.resx">
       <DependentUpon>ОкноМойПрофиль.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ОкноОтчётОбУрожае.resx">
+      <DependentUpon>ОкноОтчётОбУрожае.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ОкноОтчётов.resx">
       <DependentUpon>ОкноОтчётов.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноОтчётОПрибыли.resx">
+      <DependentUpon>ОкноОтчётОПрибыли.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ОкноОформлениеПоставкиЖивотных.resx">
       <DependentUpon>ОкноОформлениеПоставкиЖивотных.cs</DependentUpon>
@@ -176,6 +285,12 @@
     <EmbeddedResource Include="ОкноПросмотраЖивотных.resx">
       <DependentUpon>ОкноПросмотраЖивотных.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ОкноПросмотраКультур.resx">
+      <DependentUpon>ОкноПросмотраКультур.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноПросмотраСкладов.resx">
+      <DependentUpon>ОкноПросмотраСкладов.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ОкноПросмотраСотрудников.resx">
       <DependentUpon>ОкноПросмотраСотрудников.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,8 +300,20 @@
     <EmbeddedResource Include="ОкноРастениеводство.resx">
       <DependentUpon>ОкноРастениеводство.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ОкноРедактированиеИнформацииОСкладе.resx">
+      <DependentUpon>ОкноРедактированиеИнформацииОСкладе.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноРедактированиеИнформацииОТехнике.resx">
+      <DependentUpon>ОкноРедактированиеИнформацииОТехнике.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноРедактированияДанныхОЖивотном.resx">
+      <DependentUpon>ОкноРедактированияДанныхОЖивотном.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ОкноРедактированияДанныхСотрудника.resx">
       <DependentUpon>ОкноРедактированияДанныхСотрудника.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноРедактированияИнформацииОКультуре.resx">
+      <DependentUpon>ОкноРедактированияИнформацииОКультуре.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ОПрограмме.resx">
       <DependentUpon>ОПрограмме.cs</DependentUpon>

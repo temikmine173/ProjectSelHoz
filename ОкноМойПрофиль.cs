@@ -21,5 +21,19 @@ namespace СельскоеХозяйство
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                label8.Visible = true;
+                textBox4.Visible = true;
+            }
+            else
+            {
+                label8.Visible = false;
+                textBox4.Visible = false;
+            }
+        }
     }
 }

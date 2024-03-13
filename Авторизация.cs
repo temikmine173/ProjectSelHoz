@@ -49,6 +49,8 @@ namespace СельскоеХозяйство
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
                     sqlDataAdapter.SelectCommand = commandAvtorization;
 
+                    UserData.userPassword = textBox2.Text;
+
                     object result = commandAvtorization.ExecuteScalar();
 
                     if (captchaText == textBox3.Text)
