@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace СельскоеХозяйство
 {
-    partial class AboutBox1 : Form
+    partial class ОПрограмме : Form
     {
-        public AboutBox1()
+        public ОПрограмме()
         {
             InitializeComponent();
             this.Text = String.Format("О программе {0}", AssemblyTitle);
@@ -110,7 +110,7 @@ namespace СельскоеХозяйство
         private void okButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 fr1 = new Form1();
+            ГлавнаяФорма fr1 = new ГлавнаяФорма();
             fr1.Show();
         }
 

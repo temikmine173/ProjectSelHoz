@@ -46,41 +46,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
+    <Compile Include="ОкноДобавленияСотрудника.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
+    <Compile Include="ОкноДобавленияСотрудника.Designer.cs">
+      <DependentUpon>ОкноДобавленияСотрудника.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ОкноДокументы.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ОкноДокументы.Designer.cs">
+      <DependentUpon>ОкноДокументы.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="ОкноМойПрофиль.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="ОкноМойПрофиль.Designer.cs">
+      <DependentUpon>ОкноМойПрофиль.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="ОкноОтчётов.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="ОкноОтчётов.Designer.cs">
+      <DependentUpon>ОкноОтчётов.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="ОкноОформлениеПоставкиЖивотных.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="ОкноОформлениеПоставкиЖивотных.Designer.cs">
+      <DependentUpon>ОкноОформлениеПоставкиЖивотных.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="ОкноОформленияПоставкиЗерна.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="ОкноОформленияПоставкиЗерна.Designer.cs">
+      <DependentUpon>ОкноОформленияПоставкиЗерна.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноПросмотраЖивотных.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноПросмотраЖивотных.Designer.cs">
+      <DependentUpon>ОкноПросмотраЖивотных.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноПросмотраСотрудников.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноПросмотраСотрудников.Designer.cs">
+      <DependentUpon>ОкноПросмотраСотрудников.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноПросмотраТехники.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноПросмотраТехники.Designer.cs">
+      <DependentUpon>ОкноПросмотраТехники.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноРастениеводство.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноРастениеводство.Designer.cs">
+      <DependentUpon>ОкноРастениеводство.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноРедактированияДанныхСотрудника.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноРедактированияДанныхСотрудника.Designer.cs">
+      <DependentUpon>ОкноРедактированияДанныхСотрудника.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОПрограмме.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОПрограмме.Designer.cs">
+      <DependentUpon>ОПрограмме.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ГлавнаяФорма.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ГлавнаяФорма.Designer.cs">
+      <DependentUpon>ГлавнаяФорма.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноДиректора.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноДиректора.Designer.cs">
+      <DependentUpon>ОкноДиректора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноРуководителя.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноРуководителя.Designer.cs">
+      <DependentUpon>ОкноРуководителя.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ОкноБухгалтера.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ОкноБухгалтера.Designer.cs">
+      <DependentUpon>ОкноБухгалтера.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,23 +155,56 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>СельскоеХозяйствоDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
+    <EmbeddedResource Include="ОкноДобавленияСотрудника.resx">
+      <DependentUpon>ОкноДобавленияСотрудника.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ОкноДокументы.resx">
+      <DependentUpon>ОкноДокументы.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="ОкноМойПрофиль.resx">
+      <DependentUpon>ОкноМойПрофиль.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="ОкноОтчётов.resx">
+      <DependentUpon>ОкноОтчётов.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="ОкноОформлениеПоставкиЖивотных.resx">
+      <DependentUpon>ОкноОформлениеПоставкиЖивотных.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="ОкноОформленияПоставкиЗерна.resx">
+      <DependentUpon>ОкноОформленияПоставкиЗерна.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноПросмотраЖивотных.resx">
+      <DependentUpon>ОкноПросмотраЖивотных.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноПросмотраСотрудников.resx">
+      <DependentUpon>ОкноПросмотраСотрудников.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноПросмотраТехники.resx">
+      <DependentUpon>ОкноПросмотраТехники.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноРастениеводство.resx">
+      <DependentUpon>ОкноРастениеводство.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноРедактированияДанныхСотрудника.resx">
+      <DependentUpon>ОкноРедактированияДанныхСотрудника.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОПрограмме.resx">
+      <DependentUpon>ОПрограмме.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ГлавнаяФорма.resx">
+      <DependentUpon>ГлавнаяФорма.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноДиректора.resx">
+      <DependentUpon>ОкноДиректора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноРуководителя.resx">
+      <DependentUpon>ОкноРуководителя.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ОкноБухгалтера.resx">
+      <DependentUpon>ОкноБухгалтера.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace СельскоеХозяйство
 {
-    public partial class Form3 : Form
+    public partial class ОкноМойПрофиль : Form
     {
-        public Form3()
+        public ОкноМойПрофиль()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 fr2 = new Form2();
-            fr2.Show();
-            this.Close();
+
         }
     }
 }

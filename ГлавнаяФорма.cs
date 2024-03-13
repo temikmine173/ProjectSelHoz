@@ -10,23 +10,30 @@ using System.Windows.Forms;
 
 namespace СельскоеХозяйство
 {
-    public partial class Form2 : Form
+    public partial class ГлавнаяФорма : Form
     {
-        public Form2()
+        public ГлавнаяФорма()
         {
             InitializeComponent();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ОПрограмме aboutBox1 = new ОПрограмме();
+            aboutBox1.ShowDialog();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 fr1 = new Form1();
-            fr1.Show();
-            this.Close();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Авторизация fr2 = new Авторизация();
+            fr2.Show();
+            this.Hide();
         }
     }
 }

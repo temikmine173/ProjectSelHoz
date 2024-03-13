@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace СельскоеХозяйство
 {
-    public partial class Form4 : Form
+    public partial class ОкноРастениеводство : Form
     {
-        public Form4()
+        public ОкноРастениеводство()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 fr2 = new Form2();
-            fr2.Show();
+            ОкноРуководителя окноРуководителя = new ОкноРуководителя();
+            окноРуководителя.Show();
             this.Close();
         }
     }
