@@ -84,6 +84,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="СельскоеХозяйствоDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>СельскоеХозяйствоDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +125,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="СельскоеХозяйствоDataSet.xsc">
+      <DependentUpon>СельскоеХозяйствоDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="СельскоеХозяйствоDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>СельскоеХозяйствоDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="СельскоеХозяйствоDataSet.xss">
+      <DependentUpon>СельскоеХозяйствоDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
