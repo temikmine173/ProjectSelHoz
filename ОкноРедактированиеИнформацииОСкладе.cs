@@ -70,6 +70,11 @@ namespace СельскоеХозяйство
 
         private void ОкноРедактированиеИнформацииОСкладе_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "сельскоеХозяйствоDataSet.Культуры". При необходимости она может быть перемещена или удалена.
+            this.культурыTableAdapter.Fill(this.сельскоеХозяйствоDataSet.Культуры);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "сельскоеХозяйствоDataSet.ТипыСкладов". При необходимости она может быть перемещена или удалена.
+            this.типыСкладовTableAdapter.Fill(this.сельскоеХозяйствоDataSet.ТипыСкладов);
+
             comboBox2.SelectedValue = Int32.Parse(typeWarehouse);
             comboBox1.SelectedValue = Int32.Parse(numberGrain);
             textBox1.Text = inputValue;

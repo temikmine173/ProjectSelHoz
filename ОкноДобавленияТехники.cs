@@ -78,8 +78,8 @@ namespace СельскоеХозяйство
                     if (commandAddNewAvto.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Техника успешно добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ОкноПросмотраСкладов окноПросмотраСкладов = new ОкноПросмотраСкладов();
-                        окноПросмотраСкладов.Show();
+                        ОкноПросмотраТехники окноПросмотраТехники = new ОкноПросмотраТехники();
+                        окноПросмотраТехники.Show();
                         this.Close();
                     }
                     else

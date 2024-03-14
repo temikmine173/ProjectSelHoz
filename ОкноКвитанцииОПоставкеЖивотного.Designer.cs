@@ -28,14 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноКвитанцииОПоставкеЖивотного));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.поставкиЖивотныхBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.поставкиЖивотныхTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ПоставкиЖивотныхTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.поставкиЖивотныхBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,12 +103,52 @@
             this.button2.Text = "Сформировать квитанцию";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(488, 247);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 32);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Номер поставки";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.поставкиЖивотныхBindingSource;
+            this.comboBox1.DisplayMember = "НомерПоставки";
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(494, 282);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(326, 39);
+            this.comboBox1.TabIndex = 31;
+            this.comboBox1.ValueMember = "НомерПоставки";
+            // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // поставкиЖивотныхBindingSource
+            // 
+            this.поставкиЖивотныхBindingSource.DataMember = "ПоставкиЖивотных";
+            this.поставкиЖивотныхBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // поставкиЖивотныхTableAdapter
+            // 
+            this.поставкиЖивотныхTableAdapter.ClearBeforeFill = true;
+            // 
             // ОкноКвитанцииОПоставкеЖивотного
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1259, 690);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -109,10 +157,14 @@
             this.Name = "ОкноКвитанцииОПоставкеЖивотного";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноКвитанцииОПоставкеЖивотного_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.поставкиЖивотныхBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,6 +175,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource поставкиЖивотныхBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.ПоставкиЖивотныхTableAdapter поставкиЖивотныхTableAdapter;
     }
 }
 

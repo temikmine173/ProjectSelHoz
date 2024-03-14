@@ -107,7 +107,7 @@ namespace СельскоеХозяйство
         {
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = dataGridView1.DataSource;
-            bindingSource.Filter = "НомерСклада like '%" + Int32.Parse(textBox1.Text) + "%'";
+            bindingSource.Filter = "ВесХранимого like '%" + textBox1.Text + "%'";
             dataGridView1.DataSource = bindingSource;
         }
 

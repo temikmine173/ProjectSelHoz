@@ -69,8 +69,8 @@ namespace СельскоеХозяйство
                     string addNewWarehouse = $"INSERT INTO [Склады] ([НомерСклада],[НомерТипаСклада],[НомерКультуры],[ВесХранимого],[Заполнен]) Values (@numberWarehouse, @typeWarehouse, @numberGrain, @inputValue, @fullWarehouse)";
                     SqlCommand commandAddNewWarehouse = new SqlCommand(addNewWarehouse, connection);
 
-                    commandAddNewWarehouse.Parameters.AddWithValue("@numberWareouse", numberWarehouse);
-                    commandAddNewWarehouse.Parameters.AddWithValue("@typeWarhouse", comboBox2.SelectedValue);
+                    commandAddNewWarehouse.Parameters.AddWithValue("@numberWarehouse", numberWarehouse);
+                    commandAddNewWarehouse.Parameters.AddWithValue("@typeWarehouse", comboBox2.SelectedValue);
                     commandAddNewWarehouse.Parameters.AddWithValue("@numberGrain",comboBox1.SelectedValue);
                     commandAddNewWarehouse.Parameters.AddWithValue("@inputValue", textBox1.Text);
                     commandAddNewWarehouse.Parameters.AddWithValue("@fullWarehouse", comboBox3.Text);

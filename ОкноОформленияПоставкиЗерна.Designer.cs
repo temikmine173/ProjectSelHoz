@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноОформленияПоставкиЗерна));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,8 +45,16 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.заказчикиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.заказчикиTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ЗаказчикиTableAdapter();
+            this.культурыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.культурыTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.заказчикиBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,12 +105,15 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.заказчикиBindingSource;
+            this.comboBox1.DisplayMember = "НаименованиеЗаказчика";
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(231, 223);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(331, 39);
             this.comboBox1.TabIndex = 28;
+            this.comboBox1.ValueMember = "НомерЗаказчика";
             // 
             // label2
             // 
@@ -151,12 +163,15 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.культурыBindingSource;
+            this.comboBox2.DisplayMember = "НаименованиеКультуры";
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(674, 223);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(331, 39);
             this.comboBox2.TabIndex = 32;
+            this.comboBox2.ValueMember = "НомерКультуры";
             // 
             // label4
             // 
@@ -212,6 +227,29 @@
             this.textBox3.Size = new System.Drawing.Size(331, 39);
             this.textBox3.TabIndex = 36;
             // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // заказчикиBindingSource
+            // 
+            this.заказчикиBindingSource.DataMember = "Заказчики";
+            this.заказчикиBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // заказчикиTableAdapter
+            // 
+            this.заказчикиTableAdapter.ClearBeforeFill = true;
+            // 
+            // культурыBindingSource
+            // 
+            this.культурыBindingSource.DataMember = "Культуры";
+            this.культурыBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // культурыTableAdapter
+            // 
+            this.культурыTableAdapter.ClearBeforeFill = true;
+            // 
             // ОкноОформленияПоставкиЗерна
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,6 +278,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.заказчикиBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,6 +303,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource заказчикиBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.ЗаказчикиTableAdapter заказчикиTableAdapter;
+        private System.Windows.Forms.BindingSource культурыBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter культурыTableAdapter;
     }
 }
 

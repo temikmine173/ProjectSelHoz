@@ -96,7 +96,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd hh:mm:ss";
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(309, 323);
@@ -106,7 +106,6 @@
             // 
             // textBox1
             // 
-            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox1.Location = new System.Drawing.Point(309, 226);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -194,7 +193,6 @@
             // 
             // textBox2
             // 
-            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.textBox2.Location = new System.Drawing.Point(672, 324);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);

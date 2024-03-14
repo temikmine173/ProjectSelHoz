@@ -38,6 +38,8 @@
             this.поставкиЗернаBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.поставкиЗернаTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ПоставкиЗернаTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
@@ -107,7 +109,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.button2.Location = new System.Drawing.Point(469, 434);
+            this.button2.Location = new System.Drawing.Point(479, 442);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(381, 68);
@@ -115,12 +117,38 @@
             this.button2.Text = "Сформировать квитанцию";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.поставкиЗернаBindingSource;
+            this.comboBox1.DisplayMember = "НомерПоставки";
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(496, 293);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(326, 39);
+            this.comboBox1.TabIndex = 29;
+            this.comboBox1.ValueMember = "НомерПоставки";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(490, 258);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 32);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Номер поставки";
+            // 
             // ОкноКвитанцияОПоставкеЗерна
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1259, 690);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -136,6 +164,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.поставкиЗернаBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -149,6 +178,8 @@
         private System.Windows.Forms.BindingSource поставкиЗернаBindingSource;
         private СельскоеХозяйствоDataSetTableAdapters.ПоставкиЗернаTableAdapter поставкиЗернаTableAdapter;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

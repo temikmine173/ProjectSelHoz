@@ -42,8 +42,8 @@ namespace СельскоеХозяйство
                     if (commandUpdateInfoAvto.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Данные успешно обновлены", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ОкноПросмотраСотрудников окноПросмотраСотрудников = new ОкноПросмотраСотрудников();
-                        окноПросмотраСотрудников.Show();
+                        ОкноПросмотраТехники окноПросмотраТехники = new ОкноПросмотраТехники();
+                        окноПросмотраТехники.Show();
                         this.Close();
                     }
                     else

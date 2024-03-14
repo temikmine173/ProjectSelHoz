@@ -73,8 +73,8 @@ namespace СельскоеХозяйство
                     if (commandAddNewGrain.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Культура успешно добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ОкноПросмотраСкладов окноПросмотраСкладов = new ОкноПросмотраСкладов();
-                        окноПросмотраСкладов.Show();
+                        ОкноПросмотраКультур окноПросмотраКультур = new ОкноПросмотраКультур();
+                        окноПросмотраКультур.Show();
                         this.Close();
                     }
                     else

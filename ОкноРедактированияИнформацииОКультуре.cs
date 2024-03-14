@@ -41,8 +41,8 @@ namespace СельскоеХозяйство
                     if (commandUpdateInfoGrain.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Данные успешно обновлены", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ОкноПросмотраСотрудников окноПросмотраСотрудников = new ОкноПросмотраСотрудников();
-                        окноПросмотраСотрудников.Show();
+                        ОкноПросмотраКультур окноПросмотраКультур = new ОкноПросмотраКультур();
+                        окноПросмотраКультур.Show();
                         this.Close();
                     }
                     else

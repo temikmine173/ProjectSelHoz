@@ -58,8 +58,8 @@ namespace СельскоеХозяйство
                     if (commandUpdateInfoAnimal.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Данные успешно обновлены", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ОкноПросмотраСотрудников окноПросмотраСотрудников = new ОкноПросмотраСотрудников();
-                        окноПросмотраСотрудников.Show();
+                        ОкноПросмотраЖивотных окноПросмотраЖивотных = new ОкноПросмотраЖивотных();
+                        окноПросмотраЖивотных.Show();
                         this.Close();
                     }
                     else

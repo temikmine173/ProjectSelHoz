@@ -24,6 +24,10 @@ namespace СельскоеХозяйство
 
         private void ОкноОформленияПоставкиЗерна_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "сельскоеХозяйствоDataSet.Культуры". При необходимости она может быть перемещена или удалена.
+            this.культурыTableAdapter.Fill(this.сельскоеХозяйствоDataSet.Культуры);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "сельскоеХозяйствоDataSet.Заказчики". При необходимости она может быть перемещена или удалена.
+            this.заказчикиTableAdapter.Fill(this.сельскоеХозяйствоDataSet.Заказчики);
             try
             {
                 string connectionString = @"Data Source=TemikPC;Initial Catalog=СельскоеХозяйство;Integrated Security=True";
@@ -37,7 +41,7 @@ namespace СельскоеХозяйство
 
                     numberDelivery += 1;
 
-                    string selectIdEmployee = $"SELECT [НомерСотрудника] FROM [Сотрудники] INNER JOIN [Пользователи] ON [Сотрудники].[НомерСотрудника] = [Пользователи].[НомерСотрудника] WHERE [Пользователи].[Пароль]='" + UserData.userPassword + "'";
+                    string selectIdEmployee = $"SELECT [Сотрудники].[НомерСотрудника] FROM [Сотрудники] INNER JOIN [Пользователи] ON [Сотрудники].[НомерСотрудника] = [Пользователи].[НомерСотрудника] WHERE [Пользователи].[Пароль]='" + UserData.userPassword + "'";
                     SqlCommand commandSelectIdEmployee = new SqlCommand(selectIdEmployee, connection);
                     numberEmployee = (int)commandSelectIdEmployee.ExecuteScalar();
 

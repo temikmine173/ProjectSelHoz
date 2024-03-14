@@ -77,8 +77,8 @@ namespace СельскоеХозяйство
                     if (commandAddNewAnimal.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("Животное успешно добавлено", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ОкноПросмотраСкладов окноПросмотраСкладов = new ОкноПросмотраСкладов();
-                        окноПросмотраСкладов.Show();
+                        ОкноПросмотраЖивотных окноПросмотраЖивотных = new ОкноПросмотраЖивотных();
+                        окноПросмотраЖивотных.Show();
                         this.Close();
                     }
                     else

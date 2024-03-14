@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноРедактированиеИнформацииОСкладе));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,8 +43,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.типыСкладовBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.типыСкладовTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ТипыСкладовTableAdapter();
+            this.культурыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.культурыTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.типыСкладовBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,6 +135,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.типыСкладовBindingSource;
             this.comboBox2.DisplayMember = "ТипСклада";
             this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.comboBox2.FormattingEnabled = true;
@@ -137,6 +147,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.культурыBindingSource;
             this.comboBox1.DisplayMember = "НаименованиеКультуры";
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.comboBox1.FormattingEnabled = true;
@@ -194,6 +205,29 @@
             this.label2.TabIndex = 78;
             this.label2.Text = "Хранимая культура";
             // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // типыСкладовBindingSource
+            // 
+            this.типыСкладовBindingSource.DataMember = "ТипыСкладов";
+            this.типыСкладовBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // типыСкладовTableAdapter
+            // 
+            this.типыСкладовTableAdapter.ClearBeforeFill = true;
+            // 
+            // культурыBindingSource
+            // 
+            this.культурыBindingSource.DataMember = "Культуры";
+            this.культурыBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // культурыTableAdapter
+            // 
+            this.культурыTableAdapter.ClearBeforeFill = true;
+            // 
             // ОкноРедактированиеИнформацииОСкладе
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,6 +254,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.типыСкладовBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +277,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource типыСкладовBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.ТипыСкладовTableAdapter типыСкладовTableAdapter;
+        private System.Windows.Forms.BindingSource культурыBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter культурыTableAdapter;
     }
 }
 
