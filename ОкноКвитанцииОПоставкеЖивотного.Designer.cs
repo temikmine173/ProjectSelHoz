@@ -102,13 +102,14 @@
             this.button2.TabIndex = 29;
             this.button2.Text = "Сформировать квитанцию";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(488, 247);
+            this.label2.Location = new System.Drawing.Point(492, 247);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(209, 32);
@@ -121,11 +122,12 @@
             this.comboBox1.DisplayMember = "НомерПоставки";
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(494, 282);
+            this.comboBox1.Location = new System.Drawing.Point(498, 282);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(326, 39);
             this.comboBox1.TabIndex = 31;
             this.comboBox1.ValueMember = "НомерПоставки";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // сельскоеХозяйствоDataSet
             // 

@@ -116,6 +116,7 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "Сформировать квитанцию";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
@@ -128,6 +129,7 @@
             this.comboBox1.Size = new System.Drawing.Size(326, 39);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.ValueMember = "НомерПоставки";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
