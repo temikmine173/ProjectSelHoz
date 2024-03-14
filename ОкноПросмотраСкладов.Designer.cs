@@ -41,19 +41,19 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
-            this.складыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.складыTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.СкладыTableAdapter();
             this.номерСкладаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.номерТипаСкладаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.номерКультурыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.весХранимогоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.заполненDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.складыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.складыTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.СкладыTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.складыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,6 +122,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(331, 39);
             this.textBox1.TabIndex = 42;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button4
             // 
@@ -133,6 +134,7 @@
             this.button4.TabIndex = 41;
             this.button4.Text = "Удалить запись";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -187,20 +189,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(893, 422);
             this.dataGridView1.TabIndex = 37;
             // 
-            // сельскоеХозяйствоDataSet
-            // 
-            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
-            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // складыBindingSource
-            // 
-            this.складыBindingSource.DataMember = "Склады";
-            this.складыBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
-            // 
-            // складыTableAdapter
-            // 
-            this.складыTableAdapter.ClearBeforeFill = true;
-            // 
             // номерСкладаDataGridViewTextBoxColumn
             // 
             this.номерСкладаDataGridViewTextBoxColumn.DataPropertyName = "НомерСклада";
@@ -246,6 +234,20 @@
             this.заполненDataGridViewTextBoxColumn.ReadOnly = true;
             this.заполненDataGridViewTextBoxColumn.Width = 150;
             // 
+            // складыBindingSource
+            // 
+            this.складыBindingSource.DataMember = "Склады";
+            this.складыBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // складыTableAdapter
+            // 
+            this.складыTableAdapter.ClearBeforeFill = true;
+            // 
             // ОкноПросмотраСкладов
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -270,8 +272,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.складыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

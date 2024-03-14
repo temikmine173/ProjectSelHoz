@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноРедактированияДанныхОЖивотном));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +41,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.типыЖивотныхBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.типыЖивотныхTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ТипыЖивотныхTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.типыЖивотныхBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,6 +131,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.типыЖивотныхBindingSource;
             this.comboBox1.DisplayMember = "ТипЖивотного";
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.comboBox1.FormattingEnabled = true;
@@ -165,6 +172,21 @@
             this.button2.TabIndex = 45;
             this.button2.Text = "Сохранить изменения";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // типыЖивотныхBindingSource
+            // 
+            this.типыЖивотныхBindingSource.DataMember = "ТипыЖивотных";
+            this.типыЖивотныхBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // типыЖивотныхTableAdapter
+            // 
+            this.типыЖивотныхTableAdapter.ClearBeforeFill = true;
             // 
             // ОкноРедактированияДанныхОЖивотном
             // 
@@ -190,6 +212,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.типыЖивотныхBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,6 +232,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource типыЖивотныхBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.ТипыЖивотныхTableAdapter типыЖивотныхTableAdapter;
     }
 }
 

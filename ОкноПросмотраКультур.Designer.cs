@@ -41,18 +41,18 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
-            this.культурыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.культурыTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter();
             this.номерКультурыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.наименованиеКультурыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.цветКультурыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.срокСозреванияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.культурыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.культурыTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.КультурыTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -121,6 +121,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(331, 39);
             this.textBox1.TabIndex = 42;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button4
             // 
@@ -132,6 +133,7 @@
             this.button4.TabIndex = 41;
             this.button4.Text = "Удалить запись";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -185,20 +187,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(893, 422);
             this.dataGridView1.TabIndex = 37;
             // 
-            // сельскоеХозяйствоDataSet
-            // 
-            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
-            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // культурыBindingSource
-            // 
-            this.культурыBindingSource.DataMember = "Культуры";
-            this.культурыBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
-            // 
-            // культурыTableAdapter
-            // 
-            this.культурыTableAdapter.ClearBeforeFill = true;
-            // 
             // номерКультурыDataGridViewTextBoxColumn
             // 
             this.номерКультурыDataGridViewTextBoxColumn.DataPropertyName = "НомерКультуры";
@@ -235,6 +223,20 @@
             this.срокСозреванияDataGridViewTextBoxColumn.ReadOnly = true;
             this.срокСозреванияDataGridViewTextBoxColumn.Width = 200;
             // 
+            // культурыBindingSource
+            // 
+            this.культурыBindingSource.DataMember = "Культуры";
+            this.культурыBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // культурыTableAdapter
+            // 
+            this.культурыTableAdapter.ClearBeforeFill = true;
+            // 
             // ОкноПросмотраКультур
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,8 +261,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.культурыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

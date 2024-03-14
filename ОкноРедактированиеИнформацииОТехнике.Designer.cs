@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ОкноРедактированиеИнформацииОТехнике));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,8 +43,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.сельскоеХозяйствоDataSet = new СельскоеХозяйство.СельскоеХозяйствоDataSet();
+            this.типыТехникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.типыТехникиTableAdapter = new СельскоеХозяйство.СельскоеХозяйствоDataSetTableAdapters.ТипыТехникиTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.типыТехникиBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,6 +108,7 @@
             this.button2.TabIndex = 58;
             this.button2.Text = "Сохранить изменения";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -159,6 +166,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.типыТехникиBindingSource;
             this.comboBox1.DisplayMember = "ТипТехники";
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.comboBox1.FormattingEnabled = true;
@@ -189,6 +197,20 @@
             this.textBox1.Size = new System.Drawing.Size(331, 39);
             this.textBox1.TabIndex = 51;
             // 
+            // сельскоеХозяйствоDataSet
+            // 
+            this.сельскоеХозяйствоDataSet.DataSetName = "СельскоеХозяйствоDataSet";
+            this.сельскоеХозяйствоDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // типыТехникиBindingSource
+            // 
+            this.типыТехникиBindingSource.DataMember = "ТипыТехники";
+            this.типыТехникиBindingSource.DataSource = this.сельскоеХозяйствоDataSet;
+            // 
+            // типыТехникиTableAdapter
+            // 
+            this.типыТехникиTableAdapter.ClearBeforeFill = true;
+            // 
             // ОкноРедактированиеИнформацииОТехнике
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,9 +233,12 @@
             this.Name = "ОкноРедактированиеИнформацииОТехнике";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноРедактированиеИнформацииОТехнике_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сельскоеХозяйствоDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.типыТехникиBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,6 +259,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private СельскоеХозяйствоDataSet сельскоеХозяйствоDataSet;
+        private System.Windows.Forms.BindingSource типыТехникиBindingSource;
+        private СельскоеХозяйствоDataSetTableAdapters.ТипыТехникиTableAdapter типыТехникиTableAdapter;
     }
 }
 

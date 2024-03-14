@@ -156,6 +156,7 @@
             this.button2.TabIndex = 81;
             this.button2.Text = "Сохранить изменения";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -215,6 +216,7 @@
             this.Name = "ОкноРедактированиеИнформацииОСкладе";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сельское хозяйство";
+            this.Load += new System.EventHandler(this.ОкноРедактированиеИнформацииОСкладе_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

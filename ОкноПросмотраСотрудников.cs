@@ -36,9 +36,67 @@ namespace СельскоеХозяйство
         {
             try
             {
+                string numberEmployee = "";
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    if (selectedRow.Cells[0].Value != null)
+                    {
+                        numberEmployee = selectedRow.Cells[0].Value.ToString();
+                    }
+                }
 
+                string fio = "";
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    if (selectedRow.Cells[1].Value != null)
+                    {
+                        fio = selectedRow.Cells[1].Value.ToString();
+                    }
+                }
 
-                ОкноРедактированияДанныхСотрудника окноРедактированияДанныхСотрудника = new ОкноРедактированияДанныхСотрудника();
+                string birthdayDate = "";
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    if (selectedRow.Cells[2].Value != null)
+                    {
+                        birthdayDate = selectedRow.Cells[2].Value.ToString();
+                    }
+                }
+
+                string numberPassport = "";
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    if (selectedRow.Cells[3].Value != null)
+                    {
+                        numberPassport = selectedRow.Cells[3].Value.ToString();
+                    }
+                }
+
+                string numberPhone = "";
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    if (selectedRow.Cells[4].Value != null)
+                    {
+                        numberPhone = selectedRow.Cells[4].Value.ToString();
+                    }
+                }
+
+                string ageInWork = "";
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    if (selectedRow.Cells[5].Value != null)
+                    {
+                        ageInWork = selectedRow.Cells[5].Value.ToString();
+                    }
+                }
+
+                ОкноРедактированияДанныхСотрудника окноРедактированияДанныхСотрудника = new ОкноРедактированияДанныхСотрудника(numberEmployee,fio,birthdayDate,numberPassport,numberPhone,ageInWork);
                 окноРедактированияДанныхСотрудника.Show();
                 this.Close();
             }
@@ -51,7 +109,6 @@ namespace СельскоеХозяйство
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "сельскоеХозяйствоDataSet.Сотрудники". При необходимости она может быть перемещена или удалена.
             this.сотрудникиTableAdapter.Fill(this.сельскоеХозяйствоDataSet.Сотрудники);
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
