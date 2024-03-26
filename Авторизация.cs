@@ -59,7 +59,8 @@ namespace СельскоеХозяйство
                         {
                             string Role = result.ToString();
 
-                            switch (Role)
+                            // выбор пользователя по роли
+                            switch (Role) 
                             {
                                 case "Директор":
                                     ОкноДиректора окноДиректора = new ОкноДиректора();

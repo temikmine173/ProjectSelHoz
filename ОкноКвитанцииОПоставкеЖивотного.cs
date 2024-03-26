@@ -57,7 +57,7 @@ namespace СельскоеХозяйство
                         numberCustomer = reader["НомерЗаказчика"].ToString();
                         numberAnimal = reader["НомерЖивотного"].ToString();
                         numberEmployee = reader["НомерСотрудника"].ToString();
-                        count = reader["КоличествоПоставляемого"].ToString();
+                        count = reader["Количество"].ToString();
                         priceDelivery = reader["ЦенаПоставки"].ToString();
                     }
                     reader.Close();
@@ -75,6 +75,7 @@ namespace СельскоеХозяйство
         {
             try
             {
+                // Для использования данного кода откроите Проект - Управление пакетами NuGet и в поиске найдете iTextSharp скачайте и установите
                 // Создайте документ PDF
                 Document document = new Document();
 
@@ -94,7 +95,7 @@ namespace СельскоеХозяйство
                     document.Open();
                     document.NewPage();
 
-                    // Здесь вы можете использовать reader.GetInt32, reader.GetString, и так далее
+                    // Здесь вы можете использовать reader.GetInt32, reader.GetString, и так далее| добавление текста
                     Paragraph paragraph1 = new Paragraph("Номер поставки: " + numberDelivery, font);
                     Paragraph paragraph2 = new Paragraph("Номер заказчика: " + numberCustomer, font);
                     Paragraph paragraph3 = new Paragraph("Номер сотрудника: " + numberEmployee, font);

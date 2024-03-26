@@ -6,11 +6,13 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace СельскоеХозяйство
 {
     partial class ОПрограмме : Form
     {
+        private SoundPlayer player;
         public ОПрограмме()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace СельскоеХозяйство
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
+            player = new SoundPlayer("C:/Users/temik/Downloads/sad-ham.wav");
         }
 
         #region Методы доступа к атрибутам сборки
@@ -122,6 +125,16 @@ namespace СельскоеХозяйство
         private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ОПрограмме_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            player.Play();
         }
     }
 }
